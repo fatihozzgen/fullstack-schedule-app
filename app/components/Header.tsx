@@ -3,6 +3,8 @@
 import * as React from "react";
 import { Avatar, Grid, Button, Switch, FormControlLabel} from "@mui/material";
 import { useRouter,usePathname } from "next/navigation";
+import Logo from "./Logo";
+
 
 export default function Header({switchTheme} : {switchTheme: any}) {
     const pathname = usePathname();
@@ -17,6 +19,7 @@ export default function Header({switchTheme} : {switchTheme: any}) {
             alignItems="center"
             >
                 <Grid item lg={6} >
+                    <Logo/>
                 </Grid>
                 
                 <Grid
@@ -40,7 +43,7 @@ export default function Header({switchTheme} : {switchTheme: any}) {
                 onClick={() => router.push("/profile")}
                 sx={{width:56, height:56, backgroundColor: "#1F6FFF"}}
                 >
-                    g
+                    F
                 </Avatar>
                 </Grid>               
             </Grid>
